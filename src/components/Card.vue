@@ -14,7 +14,7 @@
     </div>
     <div class="person">
       <div class="person-name">
-        <lable class="name">{{infos.personName}}</lable>
+        <label class="name">{{infos.personName}}</label>
         <label class="work">{{infos.work}}</label>
       </div>
       <div class="person-address">地址：{{infos.address}}</div>
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: "Card",
+  name: "card",
   props: {
     infos: Object
   }
@@ -39,10 +39,14 @@ export default {
 </script>
 
 <style scoped>
-.content {
-  margin-top: 30px;
+* {
   background-color: #fff;
-  width: 350px;
+}
+.content {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 100%;
 }
 .top-line {
   display: flex;
