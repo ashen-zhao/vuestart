@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/Home.vue'
+import PersonInfo from './views/PersonInfo.vue'
+import Baisi from './views/Baisi.vue'
 
 Vue.use(Router)
 
@@ -10,8 +11,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'baisi',
+      component: Baisi
+    },
+    {
+      path: '/person',
+      name: 'person',
+      component: PersonInfo
     },
     {
       path: '/about',

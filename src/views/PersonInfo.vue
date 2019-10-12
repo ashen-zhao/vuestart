@@ -1,11 +1,11 @@
 <template>
-  <pull-refresh v-model="isLoading" @refresh="onRefresh">
-    <div class="container">
+  <div class="container">
+    <pull-refresh v-model="isLoading" @refresh="onRefresh">
       <div class="list" v-for="(card,index) in cardList" :key="index">
-        <Card :infos="card" />
+        <card :infos="card" />
       </div>
-    </div>
-  </pull-refresh>
+    </pull-refresh>
+  </div>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ import { mapState } from "vuex";
 import { CARD_LIST } from "@/mutations-types.js";
 import { PullRefresh } from "vant";
 export default {
-  name: "home",
+  name: "personInfo",
   components: {
     Card,
     PullRefresh
@@ -62,8 +62,8 @@ export default {
   background-color: #f5f5f5;
 }
 .container {
-  height: 100%;
-  background-color: rebeccapurple;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 .list {
   display: flex;
