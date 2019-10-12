@@ -1,7 +1,7 @@
 <template>
   <div class="container">
       <pull-refresh v-model="isLoading" @refresh="onRefresh">
-          <div v-for="(item,index) in dataList" :key="index">
+          <div v-for="(item,index) in duanziList" :key="index">
               <duanzi :infos="item"/>
           </div>
       </pull-refresh>
@@ -11,6 +11,8 @@
 <script>
 import Duanzi from "@/components/Duanzi.vue";
 import { PullRefresh } from "vant";
+import {mapState} from 'vuex'
+import { DUANZI } from "@/mutations-types.js";
 
 export default {
   name: "baisi",
@@ -20,12 +22,16 @@ export default {
   },
   data(){
       return{
-          isLoading:false,
-          dataList:[]
+          isLoading:false
       }
   },
   created(){
       this.getDuanziList()
+  },
+  computed:{
+      ...mapState({
+          duanziList:'duanziList'
+      })
   },
   methods:{
       onRefresh(){
@@ -34,8 +40,10 @@ export default {
           }, 500);
       },
       getDuanziList(){
-          this.$http.get('/topic/list/jingxuan/29/baisi_xiaohao-iphone-4.1/0-20.json').then(function(resp){
-              console.log(resp.data.list)
+          var that = this
+          this.$http.get('/api/topic/list/jingxuan/29/baisi_xiaohao-iphone-4.1/0-20.json').then(function(resp){
+              that.$store.commit(DUANZI, resp.data.list);
+              that.isLoading = false
           }).finally(function(){
 
           })

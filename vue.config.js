@@ -29,10 +29,12 @@ module.exports = {
         https: false, //false关闭https，true为开启
         open: false, //自动打开浏览器
         proxy: {
-            '/api': {  
+            '/api': {
                 target: 'https://s.budejie.com',
                 changeOrigin: true,
-                secure: false
+                pathRewrite: {
+                    '^/api': ''
+                }
             }
         }
     }
