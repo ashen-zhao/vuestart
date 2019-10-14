@@ -1,40 +1,29 @@
 <template>
-  <pull-refresh v-model="isLoading" @refresh="onRefresh">
-    <div class="about">
-      <h2>哈哈哈哈</h2>
-      <h3>
-        <a href="http://www.devashen.com">http://www.devashen.com</a>
-      </h3>
-    </div>
-  </pull-refresh>
+  <div class="about">
+    <h3>特级警告</h3>
+    <h4>
+      <a href="http://www.devashen.com">千万不要点击，后果自负啊</a>
+    </h4>
+  </div>
 </template>
-
 <script>
-import { PullRefresh } from "vant";
 export default {
   data() {
     return {
-      isLoading: false
+      url: "http://www.devashen.com"
     };
-  },
-  components: {
-    PullRefresh
-  },
-  methods: {
-    onRefresh() {
-      setTimeout(() => {
-        this.isLoading = false;
-      }, 500);
-    }
   }
 };
 </script>
-
-<style scoped>
+<style lang='scss' scoped>
 .about {
-  text-align: left;
-  margin-left: 30px;
+  text-align: center;
   height: 100%;
+  h4 {
+    margin-top: 30px;
+    a {
+      color: red;
+    }
+  }
 }
-
 </style>
