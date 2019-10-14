@@ -63,7 +63,6 @@ export default {
 }
 .container {
   margin-bottom: 10px;
-  overflow: hidden;
   height: 100%;
 }
 .van-pull-refresh {

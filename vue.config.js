@@ -16,11 +16,20 @@ module.exports = {
         extract: true,
         // 开启 CSS source maps?
         sourceMap: false,
-        // css预设器配置项
-        loaderOptions: {},
         // 启用 CSS modules for all css / pre-processor files.
-        modules: false
+        modules: false,
+        // css预设器配置项
+        loaderOptions: {
+            less: {
+                modifyVars: {
+                    'tag-font-size': '30px',
+                    'font-size-xs': '16px'
+
+                }
+            }
+        }
     },
+
     // webpack-dev-server 相关配置
     devServer: { // 设置代理
         hot: true, //热加载

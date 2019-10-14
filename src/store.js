@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {CARD_LIST,DUANZI} from './mutations-types'
+import {CARD_LIST,DUANZI,HID_NAV} from './mutations-types'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    hidnav:false,
     cardList:[],
     duanziList:[]
   },
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     },
     [DUANZI](state,list) {
       state.duanziList = list
+    },
+    [HID_NAV](state, hid) {
+      state.hidnav = hid
     }
   },
   actions: {
