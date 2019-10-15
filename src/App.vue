@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div id="nav" :hidden="$store.state.hidnav">
-      <tabs>
+      <tabs v-model="curActive" @click="onClick">
         <tab title="图片" to="/picture" />
-        <tab title="段子" to="/" />
-        <tab title="名片" to="/person" />
+        <tab title="段子" to="/duanzi" />
+        <tab title="视频" to="/video" />
         <tab title="我的" to="/about" />
       </tabs>
     </div>
@@ -19,9 +19,28 @@ import { Tab, Tabs } from "vant";
 
 export default {
   name: "app",
+  data() {
+    return {
+      active: window.sessionStorage.getItem("currentActive")
+    };
+  },
+  computed: {
+    curActive: {
+      get: function() {
+        return Number(this.active);
+      },
+      set: function(val) {}
+    }
+  },
   components: {
     Tab,
     Tabs
+  },
+  methods: {
+    onClick(index, title) {
+      //记录当前tab，防止刷新重置
+      window.sessionStorage.setItem("currentActive", index);
+    }
   }
 };
 </script>
@@ -43,6 +62,5 @@ body {
   left: 0;
   width: 100%;
   z-index: 999;
-  padding-top: 10px;
 }
 </style>

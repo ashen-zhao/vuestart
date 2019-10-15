@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
 * {
-  background-color: #fff;
+  background-color: #ececec;
 }
 .content {
   margin-top: 10px;

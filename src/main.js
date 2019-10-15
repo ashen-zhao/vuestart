@@ -7,7 +7,6 @@ import 'vant/lib/index.css';
 
 
 Vue.prototype.$http= axios
-
 Vue.config.productionTip = false
 new Vue({
   router,

@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import PersonInfo from './views/PersonInfo.vue'
 import BaisiDuanzi from './views/BaisiDuanzi.vue'
 import UrlFrame from './views/UrlFrame.vue'
 import BaisiPicture from './views/BaisiPicture.vue'
+import BaisiVideo from './views/BaisiVideo.vue'
 
 Vue.use(Router)
 
@@ -18,14 +18,9 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/duanzi',
       name: 'duanzi',
       component: BaisiDuanzi
-    },
-    {
-      path: '/person',
-      name: 'person',
-      component: PersonInfo
     },
     {
       path: '/about',
@@ -44,6 +39,11 @@ export default new Router({
       path: '/picture',
       name: 'picture',
       component: BaisiPicture
+    },
+    {
+      path:'/video',
+      name:'video',
+      component:BaisiVideo
     }
   ]
 })

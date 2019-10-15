@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: "duanzi",
+  name: "baisi",
   props: {
     infos: Object
   }
