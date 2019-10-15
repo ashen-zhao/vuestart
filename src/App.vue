@@ -2,9 +2,10 @@
   <div id="app">
     <div id="nav" :hidden="$store.state.hidnav">
       <tabs>
-        <tab title="百思" to="/" />
+        <tab title="图片" to="/picture" />
+        <tab title="段子" to="/" />
         <tab title="名片" to="/person" />
-        <tab title="我的" to="about" />
+        <tab title="我的" to="/about" />
       </tabs>
     </div>
     <keep-alive>
@@ -34,7 +35,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #333333;
 }
 #nav {
   position: sticky;

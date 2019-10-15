@@ -15,7 +15,7 @@ import {mapState} from 'vuex'
 import { DUANZI } from "@/mutations-types.js";
 
 export default {
-  name: "baisi",
+  name: "baisi-duanzi",
   components: {
     Duanzi,
     PullRefresh
@@ -36,7 +36,7 @@ export default {
   methods:{
       onRefresh(){
           setTimeout(() => {
-              this.isLoading = false
+              this.getDuanziList()
           }, 500);
       },
       getDuanziList(){

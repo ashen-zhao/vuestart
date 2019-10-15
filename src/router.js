@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import PersonInfo from './views/PersonInfo.vue'
-import Baisi from './views/Baisi.vue'
+import BaisiDuanzi from './views/BaisiDuanzi.vue'
 import UrlFrame from './views/UrlFrame.vue'
+import BaisiPicture from './views/BaisiPicture.vue'
 
 Vue.use(Router)
 
+//处理在当前页，再次push报错的问题
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
@@ -17,8 +19,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'baisi',
-      component: Baisi
+      name: 'duanzi',
+      component: BaisiDuanzi
     },
     {
       path: '/person',
@@ -36,7 +38,12 @@ export default new Router({
     {
       path: '/urlframe',
       name: 'urlframe',
-      component:UrlFrame
+      component: UrlFrame
+    },
+    {
+      path: '/picture',
+      name: 'picture',
+      component: BaisiPicture
     }
   ]
 })
