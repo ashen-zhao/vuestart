@@ -17,7 +17,7 @@ import BVideo from "@/components/BVideo.vue";
 import { PullRefresh } from "vant";
 
 export default {
-  name: "baisi-picture",
+  name: "BaisiAll",
   components: {
     Pic,
     Duanzi,

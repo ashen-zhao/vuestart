@@ -34,7 +34,8 @@ $name-height: 27px;
   .header {
     display: flex;
     flex-direction: row;
-     margin-top: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
     .avator {
       background-color: #f5f5f5;
       margin-left: 10px;
