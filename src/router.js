@@ -4,6 +4,7 @@ import BaisiDuanzi from './views/BaisiDuanzi.vue'
 import UrlFrame from './views/UrlFrame.vue'
 import BaisiPicture from './views/BaisiPicture.vue'
 import BaisiVideo from './views/BaisiVideo.vue'
+import BaisiAll from './views/BaisiAll.vue'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: '/',
+      name: "home",
+      component: BaisiAll
+    },
     {
       path: '/duanzi',
       name: 'duanzi',
@@ -41,9 +47,9 @@ export default new Router({
       component: BaisiPicture
     },
     {
-      path:'/video',
-      name:'video',
-      component:BaisiVideo
+      path: '/video',
+      name: 'video',
+      component: BaisiVideo
     }
   ]
 })

@@ -2,6 +2,7 @@
   <div id="app">
     <div id="nav" :hidden="$store.state.hidnav">
       <tabs v-model="curActive" @click="onClick">
+        <tab title="全部" to="/" />
         <tab title="图片" to="/picture" />
         <tab title="段子" to="/duanzi" />
         <tab title="视频" to="/video" />
