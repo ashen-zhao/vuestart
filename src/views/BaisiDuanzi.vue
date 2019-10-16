@@ -54,4 +54,7 @@ export default {
 </script>
 
 <style scoped>
+.container{
+    background-color:#F5f5f5;
+}
 </style>

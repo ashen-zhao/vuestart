@@ -4,7 +4,8 @@
       <div>{{infos.text}}</div>
       <video
         :src="infos.type=='video' ? infos.video.download[0]:''"
-        controls='controls' :poster="infos.video.thumbnail[0]"
+        controls="controls"
+        :poster="infos.video.thumbnail[0]"
       >您的浏览器不支持 video 标签。</video>
     </div>
   </baisi-header>

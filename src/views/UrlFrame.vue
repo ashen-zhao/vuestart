@@ -11,9 +11,10 @@
 import { HID_NAV } from "@/mutations-types.js";
 import { NavBar } from "vant";
 
+// 如果是APP，则不采取这种方式。
+// APP的话，则让app再开一个webview
 export default {
   name: "urlFrame",
-
   components: {
     NavBar
   },
@@ -44,11 +45,7 @@ export default {
     line-height: 44px;
   }
   .iframe-box {
-    top: 44px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
+    padding-top: 44px;
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
     height: 10000px;

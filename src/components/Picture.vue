@@ -2,7 +2,7 @@
   <baisi-header :infos="infos">
     <div>
       <div>{{infos.text}}</div>
-      <img :src="infos.type=='gif' ? infos.gif.images[0]:infos.image.big[0]" />
+      <img v-gallery :src="infos.type=='gif' ? infos.gif.images[0]:infos.image.big[0]" />
     </div>
   </baisi-header>
 </template>
@@ -23,5 +23,6 @@ export default {
 img {
     margin-top:10px;
     max-width:100%;
+    max-height: 320px;
 }
 </style>

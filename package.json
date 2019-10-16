@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --mode dev",
+    "prod": "vue-cli-service serve --mode prod",
     "build:prod": "vue-cli-service build --mode production",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -25,6 +26,7 @@
     "babel-plugin-import": "^1.12.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "img-vuer": "^0.19.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "node-sass": "^4.12.0",

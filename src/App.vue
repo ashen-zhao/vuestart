@@ -29,7 +29,7 @@ export default {
       get: function() {
         return Number(this.active);
       },
-      set: function(val) {}
+      set: function() {}
     }
   },
   components: {
@@ -37,7 +37,7 @@ export default {
     Tabs
   },
   methods: {
-    onClick(index, title) {
+    onClick(index) {
       //记录当前tab，防止刷新重置
       window.sessionStorage.setItem("currentActive", index);
     }
@@ -62,5 +62,8 @@ body {
   left: 0;
   width: 100%;
   z-index: 999;
+}
+.van-ellipsis {
+  font-size: 17px;
 }
 </style>
