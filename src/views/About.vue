@@ -2,7 +2,7 @@
   <div class="about">
     <h3>特级警告</h3>
     <h4>
-      <a href="http://www.devashen.com" @click.prevent="onClick">千万不要点我，后果自负啊</a>
+      <a href="http://www.baidu.com" @click.prevent="onClick">千万不要点我，后果自负啊</a>
     </h4>
     <div class="card">
       <card :infos="cardInfo" />
