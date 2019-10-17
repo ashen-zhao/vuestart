@@ -3,8 +3,8 @@
 
 ### 功能演示
 ---
-![ee](./screenshot/demo.gif)
 
+<img style="background-color:#f5f5f5;padding:5px;" src="./screenshot/demo.gif"/>
 
 ## 安装
 ```
