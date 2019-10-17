@@ -24,5 +24,7 @@ img {
     margin-top:10px;
     max-width:100%;
     max-height: 320px;
+    background-color:#f2f2f2;
+    padding: 1px;
 }
 </style>

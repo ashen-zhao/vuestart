@@ -45,13 +45,14 @@ export default {
     line-height: 44px;
   }
   .iframe-box {
-    padding-top: 44px;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
-    height: 10000px;
     iframe {
-      height: 100%;
       width: 100%;
+      height: 100%;
+      -webkit-overflow-scrolling: touch;
+      overflow: scroll;
+      position: absolute;
+      top: 44px;
+      left: 0px;
     }
   }
 }

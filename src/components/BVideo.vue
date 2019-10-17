@@ -26,6 +26,8 @@ export default {
 <style scoped>
 video {
   margin-top: 10px;
-  max-width: 60%;
+  max-width: 70%;
+  background-color: #f2f2f2;
+  padding: 1px;
 }
 </style>

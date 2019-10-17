@@ -6,12 +6,12 @@
 ![ee](./screenshot/demo.gif)
 
 
-## Project setup
+## 安装
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 编译运行
 ```
 npm run dev
 

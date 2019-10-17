@@ -64,6 +64,7 @@ body {
   width: 100%;
   z-index: 999;
 }
+// 查看层级视图，可知
 .van-ellipsis {
   font-size: 17px;
 }
