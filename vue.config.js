@@ -10,26 +10,6 @@ module.exports = {
             // 为开发环境修改配置...
         }
     },
-    // css相关配置
-    css: {
-        // 是否使用css分离插件 ExtractTextPlugin 生产环境下是true,开发环境下是false
-        extract: true,
-        // 开启 CSS source maps?
-        sourceMap: false,
-        // 启用 CSS modules for all css / pre-processor files.
-        modules: false,
-        // css预设器配置项
-        loaderOptions: {
-            less: {
-                modifyVars: {
-                    'tag-font-size': '30px',
-                    'font-size-xs': '16px'
-
-                }
-            }
-        }
-    },
-
     // webpack-dev-server 相关配置
     devServer: { // 设置代理
         hot: true, //热加载
@@ -41,8 +21,9 @@ module.exports = {
             '/api': {
                 target: 'https://s.budejie.com',
                 changeOrigin: true,
+                ws: true,
                 pathRewrite: {
-                    '^/api': ''
+                    '^/api': '/'
                 }
             }
         }
