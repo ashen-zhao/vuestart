@@ -6,6 +6,14 @@
 
 <img style="background-color:#F6F8FA;padding:5px;" src="./screenshot/demo.gif"/>
 
+### 实现功能-粗描淡写
+1、vue-router：路由管理（页面之前的跳转、导航守卫功能等）  
+2、vuex：状态管理（登录状态、导航显示状态等）  
+3、vant：tab标签切换、列表展示、下拉刷新、上拉加载  
+4、图片全屏浏览  
+5、vue内嵌访问第三方url的iframe
+
+
 ### 安装
 ```
 npm install
