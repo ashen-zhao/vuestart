@@ -1,4 +1,4 @@
-# Vue学习，上手demo记录(vue-cli3、vue-router、vuex、axios、sass、vant等、待续）
+# Vue学习，新手上手demo记录(vue-cli3、vue-router、vuex、axios、sass、vant等、待续）
 ---
 
 ### 功能演示
@@ -22,7 +22,6 @@ npm run dev
 npm run build
 
 ```
-
 
 ---
 ### 问题记录：
