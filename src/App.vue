@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav" :hidden="$store.state.hidnav">
+    <div id="nav" v-if="!$store.state.hidnav">
       <tabs v-model="curActive" @click="onClick" animated swipeable>
         <tab title="全部" to="/"></tab>
         <tab title="图片" to="/picture" />

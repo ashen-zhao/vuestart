@@ -14,9 +14,8 @@ Router.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
 }
 
-export default new Router({
+const router = new Router({
   mode: 'hash',
-  base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
@@ -50,6 +49,31 @@ export default new Router({
       path: '/video',
       name: 'video',
       component: BaisiVideo
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('./views/Login.vue')
     }
   ]
 })
+import store from './store'
+import { HID_NAV } from './mutations-types.js'
+
+router.beforeEach((to, from, next) => {
+  if (to.name === 'login') {
+    return next()
+  }
+  let islogin = window.localStorage.getItem('isLogin') === 'true'
+  if (islogin) {
+    store.commit(HID_NAV, false)
+    return next()
+  } else {
+    store.commit(HID_NAV, true)
+    return next({
+      name: 'login'
+    })
+  }
+})
+
+export default router

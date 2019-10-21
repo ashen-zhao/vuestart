@@ -4,13 +4,16 @@
     <h4>
       <a href="http://www.baidu.com" @click.prevent="onClick">千万不要点我，后果自负啊</a>
     </h4>
-    <div class="card">
-      <card :infos="cardInfo" />
+    <div class="card"  @click="onClick">
+      <card :infos="cardInfo"/>
     </div>
+
+    <div class="logout" @click="logoutAction">模拟登出</div>
   </div>
 </template>
 <script>
 import Card from "@/components/Card.vue";
+import { LOGIN } from "@/mutations-types.js";
 export default {
   components: {
     Card
@@ -38,6 +41,9 @@ export default {
         name: "urlframe",
         query: { src: this.url }
       });
+    },
+    logoutAction() {
+      this.$store.commit(LOGIN, false)
     }
   }
 };
@@ -59,6 +65,16 @@ export default {
     display: flex;
     margin-top: 30px;
     width: 100%;
+  }
+  .logout {
+     margin-top: 40px;
+    background-color:#4B97E2;
+    color: white;
+    height: 44px;
+    width: 80%;
+    margin-left: 10%;
+    line-height: 44px;
+    border-radius: 10px;
   }
 }
 </style>
