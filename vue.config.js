@@ -1,8 +1,10 @@
 const webpack = require('webpack')
 //参数配置：https://cli.vuejs.org/zh/config/#productionsourcemap
 module.exports = {
+    // 放置静态资源
+    assetsDir: 'static',
     //部署应用包时的基本 URL
-    publicPath: process.env.NODE_ENV === 'production' ? './' : './',
+    publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
     configureWebpack: config => {
         if (process.env.NODE_ENV === 'production') {
             // 为生产环境修改配置...

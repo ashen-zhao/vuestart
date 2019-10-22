@@ -22,7 +22,8 @@ export default {
   },
   data(){
       return{
-          isLoading:false
+          isLoading:false,
+          nextPage:'0'
       }
   },
   created(){
@@ -41,9 +42,10 @@ export default {
       },
       getDuanziList(){
           var that = this
-          this.$http.get('/api/topic/list/jingxuan/29/baisi_xiaohao-iphone-4.1/0-20.json').then(function(resp){
+          this.$http.get('/api/topic/list/jingxuan/29/baisi_xiaohao-iphone-4.1/'+this.nextPage+'-20.json').then(function(resp){
               that.$store.commit(DUANZI, resp.data.list);
               that.isLoading = false
+              that.nextPage = resp.data.info.np
           }).finally(function(){
 
           })

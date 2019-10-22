@@ -4,7 +4,7 @@
 ### 功能演示
 ---
 
-<img style="background-color:#F6F8FA;padding:5px;" src="./screenshot/demo.gif"/>
+<img style="background-color:#eee;padding:5px;" src="./screenshot/demo.gif"/>
 
 ### 实现功能-粗描淡写
 1、vue-router：路由管理（页面之前的跳转、导航守卫功能等）  
@@ -22,13 +22,11 @@ npm install
 ### 编译运行
 ```
 npm run dev
-
 ```
 
 ### 打包
 ```
 npm run build
-
 ```
 
 ---
